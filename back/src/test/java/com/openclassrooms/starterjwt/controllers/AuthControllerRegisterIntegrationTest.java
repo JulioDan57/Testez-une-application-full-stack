@@ -1,4 +1,4 @@
-package com.openclassrooms.starterjwt.integration;
+package com.openclassrooms.starterjwt.controllers;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.openclassrooms.starterjwt.payload.request.SignupRequest;
