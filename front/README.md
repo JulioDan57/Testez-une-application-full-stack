@@ -52,20 +52,39 @@ By default the admin account is:
 
 Launching e2e tests:
 
--Open a terminal and run a server for testing purpose by using the command : 
-> ng run yoga:serve-coverage
+- Open a terminal and run a server for testing purpose by using the command : 
+    > ng run yoga:serve-coverage
 
--To perform all the e2e tests (you should launch yoga:serve-coverage before) :
-1. Open a new terminal and perform all the e2e tests by using the command :
-> npx cypress run
+- To perform all the e2e tests (you should launch yoga:serve-coverage before) :
+    1. Open a new terminal and perform all the e2e tests by using the command :
+        > npx cypress run
 
-2. Generate coverage report (you should launch npx cypress run command before):
+        ![npx_cypress_run_out](src/assets/npx_cypress_run_out.png) 
+    2. Generate coverage report (you should launch npx cypress run command before):
 
-> npm run e2e:coverage
+        > npm run e2e:coverage
 
-Coverage summary report is shown in terminal, and the detailed coverage report is available here:
+        ![npm_run_e2e_coverage_summary_out](src/assets/npm_run_e2e_coverage_summary_out.png) 
 
-> front/coverage/lcov-report/index.html
+        Coverage summary report is shown in terminal, and the detailed coverage report is available here:
+
+        > front/coverage/lcov-report/index.html
+
+        ![npm_run_e2e_coverage_rapport_out](src/assets/npm_run_e2e_coverage_rapport_out.png) 
+
+- To perform the e2e tests in GUI mode (you should launch yoga:serve-coverage before) :
+    1. Open a new terminal and launch the main cypress user interface by using the command :
+        > npm run cypress:open   
+
+        ![npm_run_cypress_open_out](src/assets/npm_run_cypress_open_out.png)        
+
+    2. Select the E2E Testing option.
+    ![cypress_main_gui_selection](src/assets/cypress_main_gui_selection.png)      
+    3. Choose your preferred browser for E2E testing and start the E2E testing in the selected browser.
+    ![cypress_main_gui_browser_selection](src/assets/cypress_main_gui_browser_selection.png)      
+    4. Choose a test a click on it to execute it.
+    ![cypress_browser_test_selection](src/assets/cypress_browser_test_selection.png)      
+
 
 #### Unitary tests
 
@@ -73,9 +92,14 @@ Launching tests:
 
 > npm run test:unit   
 
+![npm_run_test_unit_out](src/assets/npm_run_test_unit_out.png)   
+
 Coverage report is shown in terminal, interactive coverage report is available here: 
 
 > front/coverage/jest/unit/lcov-report/index.html
+
+![npm_run_test_unit_rapport_out](src/assets/npm_run_test_unit_rapport_out.png)   
+
 
 
 #### Integration tests
@@ -84,16 +108,24 @@ Launching tests:
 
 > npm run test:integration
 
+![npm_run_test_integration_out](src/assets/npm_run_test_integration_out.png)   
+
 Coverage report is shown in terminal, interactive coverage report is available here: 
 
 > front/coverage/jest/integration/lcov-report/index.html
 
-#### Unitary and Integration tests
+![npm_run_test_integration_rapport_out](src/assets/npm_run_test_integration_rapport_out.png)   
+
+#### Unitary and Integration tests together
 
 Launching tests:
 
 > npm run test:coverage
 
+![npm_run_test_coverage_out](src/assets/npm_run_test_coverage_out.png)   
+
 Coverage report is shown in terminal, interactive coverage report is available here: 
 
 > front/coverage/jest/lcov-report/index.html
+
+![npm_run_test_coverage_rapport_out](src/assets/npm_run_test_coverage_rapport_out.png)   
