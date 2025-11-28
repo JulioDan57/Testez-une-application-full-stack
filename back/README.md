@@ -17,13 +17,13 @@ Back-end API for managing yoga sessions. It handles sessions, users, teachers, a
 - Failsafe
 - Surefire
 - Jacoco
-- Projet dévéloppé sous IntelliJ IDEA 2025.2
+- Project developed with IntelliJ IDEA 2025.2
 
 ## Configuration
 Dans src/main/resources/application.properties :
 
 ### MySQL (it must be installed)
-The test and testdb databases must exist. A script to create them is available in ../resources/sql/script.sql
+The **test** and **testdb** databases must exist. A script to create them is available in ../resources/sql/script.sql
 - file **src/main/resources/application.properties** :
 spring.datasource.url=jdbc:=jdbc:mysql://localhost:3306/test?allowPublicKeyRetrieval=true        
 spring.datasource.username={DB_USER}  
