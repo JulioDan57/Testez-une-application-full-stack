@@ -33,8 +33,8 @@ spring.datasource.url=jdbc:=jdbc:mysql://localhost:3306/test?allowPublicKeyRetri
 spring.datasource.username={DB_USER}  
 spring.datasource.password={DB_PASSWORD}
 
-After creating the database using the script, the default admin account is as follows :
-login: yoga@studio.com
+After creating the database using the script, the default admin account is as follows :<br>
+login: yoga@studio.com<br>
 password: test!1234
 
 
