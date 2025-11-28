@@ -1,4 +1,4 @@
-# Yoga (Front-end)
+# Yoga App (Front-end)
 
 is an interactive web page that helps users manage their yoga sessions.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
@@ -46,9 +46,9 @@ By default the admin account is:
 - password: test!1234
 
 
-### Test
+## Test
 
-#### E2E
+### E2E
 
 Launching e2e tests:
 
@@ -86,7 +86,7 @@ Launching e2e tests:
     ![cypress_browser_test_selection](src/assets/cypress_browser_test_selection.png)      
 
 
-#### Unitary tests
+### Unit tests
 
 Launching tests:
 
@@ -102,7 +102,7 @@ Coverage report is shown in terminal, interactive coverage report is available h
 
 
 
-#### Integration tests
+### Integration tests
 
 Launching tests:
 
@@ -116,7 +116,7 @@ Coverage report is shown in terminal, interactive coverage report is available h
 
 ![npm_run_test_integration_rapport_out](src/assets/npm_run_test_integration_rapport_out.png)   
 
-#### Unitary and Integration tests together
+### Unit and Integration tests together
 
 Launching tests:
 

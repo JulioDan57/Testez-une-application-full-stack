@@ -3,6 +3,7 @@ package com.openclassrooms.starterjwt.controllers;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+import com.openclassrooms.starterjwt.repository.SessionRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -12,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -25,6 +27,7 @@ import com.openclassrooms.starterjwt.security.services.UserDetailsImpl;
 @SpringBootTest
 @AutoConfigureMockMvc
 @Transactional
+@ActiveProfiles("test")
 public class TeacherControllerIntegrationTest {
 
     @Autowired
@@ -37,6 +40,9 @@ public class TeacherControllerIntegrationTest {
     private UserRepository userRepository;
 
     @Autowired
+    private SessionRepository sessionRepository;
+
+    @Autowired
     private JwtUtils jwtUtils;
 
     private String adminToken;
@@ -44,8 +50,14 @@ public class TeacherControllerIntegrationTest {
     @BeforeEach
     @DisplayName("Initialisation : création d'un admin + token JWT")
     void setUp() {
+        sessionRepository.deleteAll();
+        sessionRepository.flush();
+
         teacherRepository.deleteAll();
         teacherRepository.flush();
+
+        userRepository.deleteAll();
+        userRepository.flush();
 
         User adminUser = new User();
         adminUser.setEmail("admin@example.com");
